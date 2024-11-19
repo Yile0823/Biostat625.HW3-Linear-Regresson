@@ -181,7 +181,4 @@ To ensure that your package functions correctly, you can use the `testthat` fram
 ## License {#license}
 
 This package is licensed under the MIT License.
-=======
-# YileZhu-Biostat625-HW3-LinearRegression
- This R Package performs a linear regression analysis, calculating key metrics such as point estimates, fitted values, residuals, mean squared error (MSE), R-squared, adjusted R-squared, standard errors of coefficients, t-statistics, p-values, F-statistic, degrees of freedom, and diagnostic plots.
->>>>>>> dbd4f5c7bcf4eee6fa5a169a86ba25220a642bb1
+
