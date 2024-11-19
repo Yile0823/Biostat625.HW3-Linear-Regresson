@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Linear Regression Package
 
 This R package provides a simple and efficient implementation of linear regression, including the calculation of regression coefficients, residuals, Mean Squared Error (MSE), R-squared, adjusted R-squared, standard errors of coefficients, t-statistics, p-values, and F-statistic. The package also includes diagnostic plots to evaluate model assumptions and a function to print all outputs.
@@ -181,4 +180,3 @@ To ensure that your package functions correctly, you can use the `testthat` fram
 ## License {#license}
 
 This package is licensed under the MIT License.
-
