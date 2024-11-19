@@ -28,10 +28,7 @@ linear_regression <- function(X, Y) {
     stop("The number of rows in X must match the length of Y.")
   }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> dbd4f5c7bcf4eee6fa5a169a86ba25220a642bb1
   # Calculate regression coefficients using OLS
   beta_hat <- solve(t(X) %*% X) %*% t(X) %*% Y
 
@@ -157,9 +154,4 @@ print_regression_summary <- function(results) {
 
   cat("=========================================\n")
 }
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> dbd4f5c7bcf4eee6fa5a169a86ba25220a642bb1
