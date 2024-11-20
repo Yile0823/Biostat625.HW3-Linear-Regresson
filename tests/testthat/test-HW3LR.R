@@ -1,34 +1,34 @@
 # tests/testthat/test-linear_regression.R
 
 library(testthat)
-library(HW3LR)  # 替换为你的实际包名
+library(HW3LR)  # Replace with your actual package name
 
-# 读取示例数据集
-my_data <- read.csv("C:\\HW3LR\\test.csv")  # 替换为你的数据集路径
+# Read the sample dataset
+my_data <- read.csv("C:\\HW3LR\\test.csv")  # Replace with the path to your dataset
 
-# 准备自变量矩阵 X 和因变量 Y
-Y <- my_data$y  # 因变量
-X <- cbind(1, my_data$x)  # 创建包含截距项的 X 矩阵
+# Prepare the predictor matrix X and the response variable Y
+Y <- my_data$y  # Response variable
+X <- cbind(1, my_data$x)  # Create the X matrix including the intercept term
 
-# 在每个测试用例中定义 results 对象
+# Define the results object in each test case
 test_that("linear_regression computes coefficients correctly", {
-  # 调用你的线性回归函数
+  # Call your linear regression function
   results <- linear_regression(X, Y)
 
-  # 检查回归系数长度是否正确
+  # Check if the length of the regression coefficients is correct
   expect_equal(length(results$coefficients), ncol(X), info = "Coefficient length mismatch")
 
-  # 检查 R-squared 是否在合理范围内
+  # Check if R-squared is within the valid range
   expect_true(results$r_squared >= 0 && results$r_squared <= 1, info = "R-squared out of bounds")
 
-  # 检查残差均方误差 (MSE) 是否为非负数
+  # Check if the Mean Squared Error (MSE) is non-negative
   expect_true(results$mse >= 0, info = "MSE should be non-negative")
 })
 
 test_that("linear_regression generates diagnostic plots", {
-  # 在这里再次定义 results 对象
+  # Define the results object again here
   results <- linear_regression(X, Y)
 
-  # 验证诊断图是否已生成
+  # Verify that the diagnostic plots have been generated
   expect_output(print(results$diagnostic_plots), "Diagnostic plots have been generated.")
 })
